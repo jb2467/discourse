@@ -15,7 +15,7 @@ api = Api(app)  # api router
 api.add_resource(Users, '/users')
 api.add_resource(Login, '/login')
 api.add_resource(LogOut, '/logout/<username>')
-api.add_resource(Course, '/courses')
+api.add_resource(Course, '/course/<username>')
 
 
 if __name__ == '__main__':

@@ -9,8 +9,8 @@ import json
 class Course(Resource):
     def put(self):
         return ""
-    def get(self):
-        return course_db.get_courses();
+    def get(self, username):
+        return course_db.get_courses(username);
     def delete(self):
        return ""
     def post(self): 

@@ -1,4 +1,5 @@
 import hashlib
+import secrets
 from flask_restful import Resource
 from src.db import users_db
 
@@ -11,7 +12,7 @@ class Login(Resource):
         data = request.get_json()
         username = data.get('username')
         password = data.get('password')
-        #password = hashlib.sha512(bytes(data.get('password'), 'ascii')).hexdigest() 
+        password = hashlib.sha512(bytes(data.get('password'), 'ascii')).hexdigest() 
         exist_password = users_db.get_user_password(username)
         if(exist_password and exist_password[0][0] == password):
             key = secrets.token_urlsafe(16)

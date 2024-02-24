@@ -33,7 +33,8 @@ CREATE TABLE course_enrollment (
     student_username TEXT REFERENCES users(username),
     course_code TEXT REFERENCES courses(course_code),
     section_code TEXT REFERENCES sections(section_code),
-    user_type user_role NOT NULL DEFAULT 'student'
+    user_type user_role NOT NULL DEFAULT 'student',
+    UNIQUE (student_username, course_code) 
 );
 
 INSERT INTO users (username, password, email, user_type) 
@@ -46,5 +47,14 @@ VALUES ('CSCI140', 'Introduction to computer science 1');
 INSERT INTO sections (course_code,section_code,course_admin_username)
 VALUES ('CSCI140', '.01', 'course_admin1');
 
-INSERT INTO course_enrollment(student_username,course_code,section_code,user_type)
+INSERT INTO course_enrollment(student_username, course_code, section_code, user_type)
 VALUES ('student1', 'CSCI140', '.01', 'student');
+
+-- Add a new table for assignments
+CREATE TABLE assignments (
+    id SERIAL PRIMARY KEY,
+    course_code TEXT REFERENCES courses(course_code),
+    section_code TEXT REFERENCES sections(section_code),
+    assignment_name TEXT NOT NULL,
+    pdf_file BYTEA NOT NULL
+);
