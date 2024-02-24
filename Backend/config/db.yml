@@ -1,0 +1,5 @@
+host: localhost
+database: discourse
+user: jb2467
+password: frogstar21
+port: 5432
