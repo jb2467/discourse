@@ -83,3 +83,37 @@ Potential Additional Features
     Notifications and alerts for educational deadlines and social updates.
     Analytics for educators.
     Feedback system for users to submit suggestions and improvements.
+
+
+What features will help the users achieve their goals? 
+    Notifications and Alerts: Customizable notifications for educational deadlines and social updates 
+    Analytics: for educators to track engagement and participation
+    Feedback System Mechanism for users to provide feedback and suggestion
+
+
+
+System Setup and Configuration
+    Flask framework for building the web application.
+    Flask-RESTful for REST API development.
+    Flask-CORS for handling Cross-Origin Resource Sharing (CORS), allowing the API to interact with front-end applications served from different origins.
+    PostgreSQL database for storing user and course data.
+    Psycopg2 for PostgreSQL database connection and operations in Python.
+    YAML configuration for database connection parameters to ensure flexibility and security.
+    Environment for running Python, with support for external libraries and database connections.
+
+API Functionality
+User Management
+    Endpoint for user registration, allowing new users to sign up with a username, password, and email.
+    Endpoint for user information retrieval, allowing fetching of all user details.
+    Password hashing for secure storage of user credentials.
+    Unique session key generation upon login for session management.
+Authentication and Session Management
+    Login endpoint accepting username and password, returning a session key upon successful authentication.
+    Logout endpoint that invalidates the user's session key.
+Course Management
+    Endpoint to retrieve all available courses.
+    Functionality to add new courses to the database.
+Database Interaction
+    Functions to execute SQL queries and commands related to users and courses for CRUD operations.
+    Database initialization script execution as the application starts to set up the schema.
+
