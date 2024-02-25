@@ -4,9 +4,14 @@ from src.api.login_api import Login
 from src.api.logout_api import LogOut
 from src.api.db_ultil import exec_sql_file
 from src.api.course_api import Course
+from src.api.assigments_api import Assigment
+from src.api.server_api import Server
+from src.api.channels_api import Channel
+
 from flask import Flask
 from flask_restful import Resource, Api
 from flask_cors import CORS
+from flask import request
 
 app = Flask(__name__)  # create Flask instance
 CORS(app)  # Enable CORS on Flask server to work with Nodejs pages
@@ -16,6 +21,10 @@ api.add_resource(Users, '/users')
 api.add_resource(Login, '/login')
 api.add_resource(LogOut, '/logout/<username>')
 api.add_resource(Course, '/course/<username>')
+api.add_resource(Assigment, '/assigments')
+api.add_resource(Server, '/server/<server_name>')
+api.add_resource(Channel, '/channel')
+
 
 
 if __name__ == '__main__':

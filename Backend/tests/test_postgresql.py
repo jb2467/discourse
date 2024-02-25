@@ -1,5 +1,5 @@
 import unittest
-from Backend.src.api.db_ultils import connect
+from src.db_ultils import connect
 
 class TestPostgreSQL(unittest.TestCase):
 
