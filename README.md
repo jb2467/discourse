@@ -7,7 +7,7 @@
 - Nasif Chowdhury
 
 ## Requirements Outlined
-
+https://devpost.com/software/discourse-9ajm2s
 ### Comparative Analysis
 
 #### Discord
