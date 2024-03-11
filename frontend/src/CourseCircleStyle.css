@@ -1,0 +1,27 @@
+.btn.course-circle {
+  display: inline-flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 4em; 
+  height: 4em;
+  border-radius: 50%;
+  padding: 1em; 
+  overflow: hidden;
+  font-size: 0.5em; 
+  transition: width 0.3s ease-in-out, height 0.3s ease-in-out, border-radius 0.3s ease-in-out; /* Smooth transition for hover effect */
+  margin-top: 0.5em; 
+}
+
+.btn.course-circle:hover {
+  width: 4.5em; 
+  height: 4.5em;
+  border-radius: 30%; 
+}
+
+.btn.course-circle .circle-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  size: 1em;
+  font-size: .9em;
+}

@@ -90,7 +90,6 @@ VALUES ('Assignment 1 CSCI', 1,'student1'),
 ('Assignment 1 MATH', 3,'student1'),
 ('Assignment 2 MATH', 3,'student1');
 
-
 INSERT INTO servers (server_name, section_id)
 VALUES ('CSCI140', 1),
 ('MATH140', 3);
@@ -102,5 +101,5 @@ VALUES ('General CS', 'CSCI140'),
 INSERT INTO chats (message, username, channel_id)
 VALUES ('Hello ca', 'student1', 1),
 ('Hi??', 'course_admin1', 1),
-('tf', 'student1', 2),
-('cat', 'course_admin1', 2);
+('I might be cooked', 'student1', 2),
+('womp womp', 'course_admin1', 2);

@@ -6,7 +6,7 @@ from flask_restful import request
 from flask_restful import reqparse
 import json
 
-class Channel(Resource):
+class Chats(Resource):
     def put(self):
         return ""
     def get(self):
@@ -19,5 +19,5 @@ class Channel(Resource):
         username = data.get('username')
         message = data.get('message')
         channel_id = data.get('channel_id')
-        chats_db.add_message(username, message, channel_id)
-        return '',400
+        chats_db.add_messages(message,username, channel_id)
+        return '',200

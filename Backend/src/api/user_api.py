@@ -14,7 +14,6 @@ class Users(Resource):
     def delete(self):
        return ""
     def post(self): 
-        id  = len(users_db.get_users()) + 1
         data = request.get_json()
         username = data.get('username')
         email = data.get('email')
@@ -22,5 +21,5 @@ class Users(Resource):
         user = (users_db.get_user(username,email))
         if len(user)>0:
             return '',400
-        users_db.add_user((id, username,password,email, ''))
+        users_db.add_user(( username,password,email, ''))
         return  '' ,200

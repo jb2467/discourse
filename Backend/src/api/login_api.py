@@ -12,10 +12,12 @@ class Login(Resource):
         data = request.get_json()
         username = data.get('username')
         password = data.get('password')
-        password = hashlib.sha512(bytes(data.get('password'), 'ascii')).hexdigest() 
+        print(username, 'username')
+        print(password, 'password')
         exist_password = users_db.get_user_password(username)
+        print(exist_password, 'exist_password')
         if(exist_password and exist_password[0][0] == password):
             key = secrets.token_urlsafe(16)
             s = users_db.update_session_key(key,username)
             return {'session_key': key}, 200
-        return "", 400
+        return "Fail", 400

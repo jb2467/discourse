@@ -24,4 +24,4 @@ class Assigment(Resource):
         course_code = data.get('course_code')
         section_code = data.get('section_code')
         assignments_db.add_assignment(assignment_name,course_code,section_code)
-        return "", 400
+        return "Assignement posted", 200

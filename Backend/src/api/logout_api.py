@@ -10,4 +10,5 @@ import json
 class LogOut(Resource):
     def put(self, username):
         users_db.update_session_key('',username)
+        return 'Logged', 200
     

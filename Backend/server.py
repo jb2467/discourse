@@ -1,3 +1,4 @@
+from src.api.chats_api import Chats
 from src.api.user_api import Users
 
 from src.api.login_api import Login
@@ -21,9 +22,10 @@ api.add_resource(Users, '/users')
 api.add_resource(Login, '/login')
 api.add_resource(LogOut, '/logout/<username>')
 api.add_resource(Course, '/course/<username>')
-api.add_resource(Assigment, '/assigments')
+api.add_resource(Assigment, '/assignments')
 api.add_resource(Server, '/server/<server_name>')
 api.add_resource(Channel, '/channel')
+api.add_resource(Chats, '/chats')
 
 
 

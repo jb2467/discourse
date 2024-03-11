@@ -13,6 +13,5 @@ def get_courses(username):
     return exec_get_all(query, (username,))
 
 def get_section_id(course_code, section_code):
-    print(course_code, section_code)
     query = "SELECT id FROM sections WHERE course_code = %s AND section_code = %s;"
     return exec_get_all(query, (course_code, section_code))[0][0]
